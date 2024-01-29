@@ -9,3 +9,19 @@ mysql> SELECT * FROM etudiant ORDER BY age DESC;
 |  4 | Barnes    | Binkie   |  16 | binkie.barnes@laplateforme.io   |
 +----+-----------+----------+-----+---------------------------------+
 5 rows in set (0.00 sec)
+____________________________________________________
+
+PS C:\Users\33753> echo "SELECT * FROM etudiant ORDER BY age DESC;" > job10.sql
+PS C:\Users\33753> ls -l job10.sql
+
+
+    Répertoire : C:\Users\33753
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        29/01/2024     17:00             88 job10.sql
+
+
+PS C:\Users\33753> cat  job10.sql
+SELECT * FROM etudiant ORDER BY age DESC;
