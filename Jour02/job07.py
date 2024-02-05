@@ -6,7 +6,7 @@ class Employe:
             host="localhost",
             user="root",
             password="maysa1995",
-            database="laplateforme"
+            database="employe_database"
         )
         self.cursor = self.connexion.cursor()
 
@@ -19,7 +19,7 @@ class Employe:
         val = (nom, prenom, salaire, id_service)
         self.cursor.execute(sql, val)
         self.connexion.commit()
-
+    
     def update_employee(self, id_employee, nom, prenom, salaire, id_service):
         sql = "UPDATE employe SET nom = %s, prenom = %s, salaire = %s, id_service = %s WHERE id = %s"
         val = (nom, prenom, salaire, id_service, id_employee)
@@ -41,4 +41,4 @@ employe_manager.create_employee("Doe", "John", 3500.00, 1)
 employees = employe_manager.get_employees()
 for employee in employees:
     print(employee)
-   
+
